@@ -1,8 +1,11 @@
 # nollbit/homebrew-tap
 
 ```sh
+brew trust nollbit/tap
 brew install nollbit/tap/monolepo
 ```
+
+Homebrew asks you to trust third-party taps before it loads their formulae.
 
 Installs `monolepo`, `docker-credential-monolepo` and `lore` (the Lore client
 bundled in `monolepo`, authorized by `monolepo login`). Supported on macOS
