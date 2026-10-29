@@ -1,0 +1,25 @@
+name: Update formula
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: update-formula
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Regenerate from the Monolepo tools manifest
+        run: python3 scripts/update.py
+      - name: Commit a changed formula
+        run: |
+          git diff --quiet && exit 0
+          version=$(sed -n 's/^  version "\(.*\)"$/\1/p' Formula/monolepo.rb)
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "monolepo $version"
+          git push
