@@ -2,7 +2,7 @@
 class Monolepo < Formula
   desc "Command-line client for Monolepo, with the Lore client included"
   homepage "https://monolepo.com"
-  version "731"
+  version "737"
 
   on_macos do
     depends_on arch: :arm64
