@@ -2,40 +2,40 @@
 class Monolepo < Formula
   desc "Command-line client for Monolepo, with the Lore client included"
   homepage "https://monolepo.com"
-  version "906"
+  version "918"
 
   on_macos do
     depends_on arch: :arm64
 
     on_arm do
-      url "https://monolepo.com/tools/v/7f1c1bee216fdca2defec249e76ccf2f121c0d5b4636c4f14c76495cf96322ad/monolepo-darwin-arm64"
-      sha256 "7f1c1bee216fdca2defec249e76ccf2f121c0d5b4636c4f14c76495cf96322ad"
+      url "https://monolepo.com/tools/v/8366e397d519e2b8ec7fc0fa7ccdbfd109e0ed8de4e2691b82de6c17ef382c09/monolepo-darwin-arm64"
+      sha256 "8366e397d519e2b8ec7fc0fa7ccdbfd109e0ed8de4e2691b82de6c17ef382c09"
 
       resource "docker-credential-monolepo" do
-        url "https://monolepo.com/tools/v/b87cdbc80d8efa46963f3b0153aeea587503883bb2a9fcf50f55ee79101832f4/docker-credential-monolepo-darwin-arm64"
-        sha256 "b87cdbc80d8efa46963f3b0153aeea587503883bb2a9fcf50f55ee79101832f4"
+        url "https://monolepo.com/tools/v/52ae1a804c55dd0a62ca281d27a270c3f11d615dac6fe8db21faa64fc783f11f/docker-credential-monolepo-darwin-arm64"
+        sha256 "52ae1a804c55dd0a62ca281d27a270c3f11d615dac6fe8db21faa64fc783f11f"
       end
     end
   end
 
   on_linux do
     on_intel do
-      url "https://monolepo.com/tools/v/f4d6adae02083f9d89eafa65eab67aa5b73834da2eee71f2f06f36a781697357/monolepo-linux-amd64"
-      sha256 "f4d6adae02083f9d89eafa65eab67aa5b73834da2eee71f2f06f36a781697357"
+      url "https://monolepo.com/tools/v/4a6e75420b4e30de114881fc8559e3f78e186268ff355a40a8ac5d0697727680/monolepo-linux-amd64"
+      sha256 "4a6e75420b4e30de114881fc8559e3f78e186268ff355a40a8ac5d0697727680"
 
       resource "docker-credential-monolepo" do
-        url "https://monolepo.com/tools/v/df8597f46c1039ee5cf47d172377925b15d431b01f453f9651297bcbde85a788/docker-credential-monolepo-linux-amd64"
-        sha256 "df8597f46c1039ee5cf47d172377925b15d431b01f453f9651297bcbde85a788"
+        url "https://monolepo.com/tools/v/1bff6b5f714a0b57b4f6b161467e05a97eced000648dfc7bd2b2cb8bebe89982/docker-credential-monolepo-linux-amd64"
+        sha256 "1bff6b5f714a0b57b4f6b161467e05a97eced000648dfc7bd2b2cb8bebe89982"
       end
     end
 
     on_arm do
-      url "https://monolepo.com/tools/v/ab2cc6e54a6bbc6df20a5a0d4a6b13a4a3b435cc639c6d2c5f9d4de9ad2a1d34/monolepo-linux-arm64"
-      sha256 "ab2cc6e54a6bbc6df20a5a0d4a6b13a4a3b435cc639c6d2c5f9d4de9ad2a1d34"
+      url "https://monolepo.com/tools/v/d2a71249aa4255212fe2b6a7fdbf923f5dbd610553b873462d3d5cb9695ce34d/monolepo-linux-arm64"
+      sha256 "d2a71249aa4255212fe2b6a7fdbf923f5dbd610553b873462d3d5cb9695ce34d"
 
       resource "docker-credential-monolepo" do
-        url "https://monolepo.com/tools/v/daed626f26d3c3b5889e9d4390c04a145ea0fcc63d2aa1616dcc11ae4afa39a5/docker-credential-monolepo-linux-arm64"
-        sha256 "daed626f26d3c3b5889e9d4390c04a145ea0fcc63d2aa1616dcc11ae4afa39a5"
+        url "https://monolepo.com/tools/v/e3e4d9ad1084260ea3ca3890bd67a5e93fb2b35f719ba7436c68f21155661c7e/docker-credential-monolepo-linux-arm64"
+        sha256 "e3e4d9ad1084260ea3ca3890bd67a5e93fb2b35f719ba7436c68f21155661c7e"
       end
     end
   end
